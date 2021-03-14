@@ -1,14 +1,35 @@
 "use strict";
 
-const suwak = document.querySelector('input[type="range"]');
 const log = document.getElementById("values");
 const card = document.querySelector("div.card");
 
-suwak.value = 0;
+const keyboard = [];
 
-const updateValue = (e) => {
-  log.textContent = e.target.value;
-  card.style.transform = `rotate(${e.target.value}deg)`;
+const rotateDiv = (dir) => {
+  let v = Number(card.style.transform.match(/(\d)+/g));
+  if (dir === "ArrowRight") {
+    if (v >= 360) v = 0;
+    ++v;
+  } else if (dir === "ArrowLeft") {
+    if (v <= 0) v = 360;
+    --v;
+  }
+  card.style.transform = `rotate(${v}deg)`;
+  console.log(card.style.transform);
 };
 
-suwak.addEventListener("input", updateValue);
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    // do not alert when only Alt key is pressed.
+    if (keyName === "Alt") {
+      return;
+    }
+    if (event.altKey) {
+      rotateDiv(keyName);
+    }
+  },
+  false
+);
