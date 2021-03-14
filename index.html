@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./images/favicon-32x32.png"
-        />
-        <link href="style.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="style.css" rel="stylesheet" />
 
-        <title>Frontend Mentor | Profile card component</title>
-    </head>
-    <body>
-        <div class="card">
-            <section class="info flex flex-ai-c">
-                <img src="images/image-victor.jpg">
-                <div class="name">Victor Crest</div>
-                <div class="age">26</div>
-                <div class="place">London</div>
-            </section>
-            <footer class="flex flex-jc-se">
-                <div class="followers">80K Followers</div>
+    <title>Frontend Mentor | Profile card component</title>
+  </head>
+  <body class="flex flex-ai-c flex-jc-c">
+    <!-- center the card -->
+    <div class="card">
+      <section class="info flex flex-ai-c">
+        <img src="images/image-victor.jpg" />
+        <div class="name">Victor Crest</div>
+        <div class="age">26</div>
+        <div class="place">London</div>
+      </section>
+      <footer class="flex flex-jc-se">
+        <div class="followers">80K Followers</div>
 
-                <div class="likes">803K Likes</div>
-                <div class="photos">1.4K Photos</div>
-            </footer>
-        </div>
-
-        <input type="range" id="vol" name="vol" min="0" max="360">
-        <p id="values"></p>
-        <script src="main.js"></script>
-    </body>
+        <div class="likes">803K Likes</div>
+        <div class="photos">1.4K Photos</div>
+      </footer>
+    </div>
+  </body>
 </html>
